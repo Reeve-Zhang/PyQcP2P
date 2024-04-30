@@ -78,10 +78,10 @@ sudo tc qdisc del dev eth0 root netem
 
 
 ## Testing with packet loss
-TBD
-
-
-
+```shell
+sudo tc qdisc add dev eth0 root netem loss 5%
+tc -s qdisc
+```
 
 ## Benchmarking
 In order to benchmark the network, first generate the files to benchmark with using reset_directories.py on each node. Make sure you enter the correct node # when prompted
